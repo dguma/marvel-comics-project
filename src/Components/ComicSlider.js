@@ -48,7 +48,7 @@ const SliderHeading = styled.div`
   height: 10vh;
   display: flex;
   align-items: center;
-  margin-top: 5%;
+  /* margin-top: 5%; */
 
   h2 {
     font-family: 'Marvel', sans-serif;
