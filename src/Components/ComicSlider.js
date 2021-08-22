@@ -30,7 +30,7 @@ const StyledCard = styled.div`
     align-items: center; */
     /* height: 20vh; */
     padding: 0 1em;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     height: 20vh;
     width: 100%;
 

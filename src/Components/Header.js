@@ -45,7 +45,7 @@ const HeaderStyled = styled.header`
         color: white;
         text-transform: uppercase;
         font-size: large;
-
+        margin-right: 1em;
         :active {
             color: red;
         }

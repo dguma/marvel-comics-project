@@ -6,7 +6,7 @@ const SearchContainer = styled.div`
     justify-content: center;
     align-items: center;
     background: rgb(200,0,0);
-    margin: 4em 25%;
+    /* margin: 4em 15%; */
     height: 5em;
 
     label {
