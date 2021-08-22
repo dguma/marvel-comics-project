@@ -1,0 +1,11 @@
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.HeroCarousel_wrapper__2J_Tt {
+    height: 40vh;
+    width: 100%;
+}

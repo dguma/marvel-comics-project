@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import ReactPlayer from 'react-player';
+import {Route} from 'react-router-dom';
+import Home from './Components/Home';
+import { useState } from 'react';
 
 function App() {
+
+  let [changeView, setChangeView] = useState(false);
+
+  setTimeout(()=>{
+    setChangeView(true)
+  },6500)
+
+  if(changeView === true) {
+    return (
+        <Route path='/' exact component={Home} />
+    )
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='logo'></div>
+
+      <ReactPlayer 
+        url='https://thumbs.gfycat.com/SpeedyPerfectIntermediateegret-mobile.mp4'
+        width='100%'
+        height='100%'
+        playing={true}
+        muted={true}
+        loop={true}
+      />
     </div>
   );
 }
