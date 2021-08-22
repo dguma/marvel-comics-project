@@ -31,10 +31,11 @@ const StyledCard = styled.div`
     /* height: 20vh; */
     padding: 0 1em;
     margin-bottom: 15%;
-    height: 25vh;
+    height: 20vh;
+    width: 100%;
 
     img {
-        /* object-fit: contain; */
+        object-fit: contain;
         width: 100%;
         height: 100%;
     }
@@ -48,7 +49,7 @@ const SliderHeading = styled.div`
   height: 10vh;
   display: flex;
   align-items: center;
-  /* margin-top: 5%; */
+  margin-top: 1em;
 
   h2 {
     font-family: 'Marvel', sans-serif;
