@@ -31,6 +31,7 @@ const StyledCard = styled.div`
     /* height: 20vh; */
     padding: 0 1em;
     margin-bottom: 15%;
+    height: 25vh;
 
     img {
         /* object-fit: contain; */
