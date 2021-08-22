@@ -25,15 +25,15 @@ const Arrow = styled.div`
 const StyledCard = styled.div`
     /* background-color: grey;
     border-left: solid thin black; */
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 20vh;
+    align-items: center; */
+    /* height: 20vh; */
     padding: 0 1em;
     margin-bottom: 15%;
 
     img {
-        object-fit: contain;
+        /* object-fit: contain; */
         width: 100%;
         height: 100%;
     }
