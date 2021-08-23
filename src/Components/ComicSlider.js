@@ -29,10 +29,10 @@ const StyledCard = styled.div`
     justify-content: space-between;
     align-items: center; */
     /* height: 20vh; */
-    padding: 0 1em;
+    /* padding: 0 .25em; */
     margin-bottom: 10%;
     height: 20vh;
-    width: 100%;
+    width: 100%vw;
 
     img {
         object-fit: contain;
