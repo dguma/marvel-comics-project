@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Marvel Comics API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+On this site, as a user you will be able search through comics and characters from Marvel.
 
-In the project directory, you can run:
+## Deployed
 
-### `npm start`
+https://marvel-comics-project.herokuapp.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. react-router-dom
 
-### `npm test`
+2. styled-components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. react-player
 
-### `npm run build`
+4. react-horizontal-scroll-menu
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this site locally you will need to run do the following in order:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you want to make changes for pull requests you will need to fork the repo first then run:
+```
+git clone [your-forked-url]
+```
 
-### `npm run eject`
+otherwise if you just want to view the code:
+```
+git clone https://github.com/dguma/marvel-comics-project
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Move into the new directory with:
+```
+cd marvel-comics-project
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+install dependencies by running:
+```
+npm i
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Getting your own key
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Head over to https://developer.marvel.com/ and click get started and follow instructions on creating and obtaining your own keys.
 
-## Learn More
+In the MarvelDB directory you will want to creat a new file called `.env.local` and put your keys in like so:
+```
+REACT_APP_PUB_KEY=YOUR_PUBLIC_KEY_HERE
+REACT_APP_PRIV_KEY=YOUR_PRIVATE_KEY_HERE
+```
+note: do not change the name of the keys unless you know what you are doing.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Now you can start the server with:
+```
+npm run start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This should open a tab in your browser on localhost port 3000 by default.
 
-### Code Splitting
+## Contribution Guidelines
+- Please create issues for bugs.
+- Create pull requests for changes to my code if you think you have an improvement.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Do NOT call api in a loop. Be mindful of the fact there is a 3000 call limit per day.
+- Pagination could improve the comics display page and decrease the amount of calls per user.
