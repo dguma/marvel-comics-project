@@ -46,7 +46,7 @@ npm i
 
 Head over to https://developer.marvel.com/ and click get started and follow instructions on creating and obtaining your own keys.
 
-In the MarvelDB directory you will want to creat a new file called `.env.local` and put your keys in like so:
+In the directory you will want to creat a new file called `.env.local` and put your keys in like so:
 ```
 REACT_APP_PUB_KEY=YOUR_PUBLIC_KEY_HERE
 REACT_APP_PRIV_KEY=YOUR_PRIVATE_KEY_HERE
