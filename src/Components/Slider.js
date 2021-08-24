@@ -67,7 +67,7 @@ const Content = styled.div`
     
 `;
 
-function Slider(props) {
+function Slider(props) { 
 
     return (
         <StyledSection>
