@@ -13,7 +13,7 @@ import AllCharacters from './AllCharacters';
 
 function Home(props) {
 
-    let ts = new Date().toISOString();
+    let ts = new Date().toISOString(); 
     let publicKey = '9c930c9afbb845dbeeaf18c71de7726a';
     let privateKey = '0c6f02a88b6d6c0af40855122cbeb1719780ac4a';
     var md5 = require('md5');
