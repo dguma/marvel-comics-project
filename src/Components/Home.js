@@ -8,6 +8,8 @@ import Details from './Details';
 import './Home.css'
 import HeroSection from './HeroSection';
 import Characters from './Characters';
+import CharacterDetails from './CharacterDetails';
+import AllCharacters from './AllCharacters';
 
 function Home(props) {
 
@@ -18,7 +20,7 @@ function Home(props) {
     
 
     let comicsUrl  = `http://gateway.marvel.com/v1/public/comics?orderBy=issueNumber&limit=100&ts=${ts}&apikey=${publicKey}&hash=${md5(ts+privateKey+publicKey)}`;
-    let charUrl = `https://gateway.marvel.com/v1/public/characters?limit=50&limit=100&ts=${ts}&apikey=${publicKey}&hash=${md5(ts+privateKey+publicKey)}`;
+    let charUrl = `https://gateway.marvel.com/v1/public/characters?limit=100&limit=100&ts=${ts}&apikey=${publicKey}&hash=${md5(ts+privateKey+publicKey)}`;
     // console.log(url);
 
     const [comics, setComics] = useState([]);
@@ -43,7 +45,7 @@ function Home(props) {
     let characterImages = characters.map(char => char.thumbnail)
     let characterImageUrl = characterImages.map(url => url.path + '.' + url.extension)
 
-    console.log(characterImageUrl)
+    // console.log(characterImageUrl)
 
     let a = comics.map(comic => comic.images[0])
 
@@ -55,11 +57,16 @@ function Home(props) {
 
     let ids = comics.map( comicId => comicId.id )
 
-    let keys = source.map(id =>{ return id.substr(44)})
+ 
 
+    let newData = characters.map(data => {
+        return {...data, thumbnail: data.thumbnail.path + '.' + data.thumbnail.extension}
+    })
+
+    let keys = newData.map(id =>{ return id.thumbnail})
     
 
-    // console.log(source)
+    console.log(newData)
 
     return (
          <BrowserRouter>
@@ -73,7 +80,7 @@ function Home(props) {
                         <Slider />
                         <ComicSlider thumb={source} />
                         <HeroSection />
-                        <Characters charData={characters} url={characterImageUrl}/>
+                        <Characters charData={newData} url={characterImageUrl}/>
                     </Route>
                     <Route path='/comics' exact>
                         <Comics comics={source} keys={ids} data={comics}/>
@@ -83,6 +90,12 @@ function Home(props) {
                     </Route> */}
                     <Route path='/details/:id' exact>
                         <Details thumb={item} keys={source} comicDetail={comics}/>
+                    </Route>
+                    <Route path='/character-details/:charId' exact>
+                        <CharacterDetails data={newData} keys={keys}/>
+                    </Route>
+                    <Route path='/characters' exact>
+                        <AllCharacters charData={newData} url={characterImageUrl}/>
                     </Route>
                 </Switch>  
                 

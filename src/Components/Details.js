@@ -49,7 +49,37 @@ function Details(props) {
 
     let him = dom.filter(item => item.images.includes(id))
     
-console.log(him)
+// console.log(id)
+
+    // if(props.data.id !== id){
+    //     return (
+    //         <ComicContainer>
+    //         <DisplayContainer>
+    //             {props.data.filter(item => item.id.includes(id)).map(item => {
+    //                 return (
+    //                     <ComicImg src={item.thumbnail} />
+    //                 );
+    //             })}
+    //         </DisplayContainer>
+    //         <Description>
+    //             {props.data.filter(item => item.id.includes(id)).map(item => {
+    //                 return (
+    //                     <Content>
+    //                         <div>
+    //                             <h2>{item.title}</h2>
+    //                             <p>Character #: {item.id}</p>
+    //                         </div>
+    //                         <div>
+    //                             <h4>Description</h4>
+    //                             <p>{item.description}</p>
+    //                         </div>
+    //                     </Content>
+    //                 );
+    //             })}
+    //         </Description>
+    //     </ComicContainer>
+    //     );
+    // }
 
 
     return (

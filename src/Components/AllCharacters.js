@@ -16,12 +16,12 @@ const StyledSection = styled.div`
     }
 `;
 
-function Characters({charData, url}) {
+function AllCharacters({charData, url}) {
 
     return (
         <StyledSection>
             {
-                charData.slice(0, 9).map(data => {
+                charData.map(data => {
                     return (
                         <div key={data.thumbnail.substr(44)} id={data.id}>
                             <Link to={`/character-details/${data.thumbnail.substr(44)}`} >
@@ -35,4 +35,4 @@ function Characters({charData, url}) {
     );
 }
 
-export default Characters;
+export default AllCharacters;

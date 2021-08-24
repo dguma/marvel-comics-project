@@ -62,6 +62,9 @@ function Header(props) {
                 <img src={SearchIcon} />
                 <input type='text' />
             </form> */}
+            <NavLink to='/characters'>
+                Characters
+            </NavLink>
             <NavLink to='/comics'>
                 Comics
             </NavLink>

@@ -25,7 +25,7 @@ const Content = styled.div`
     background: rgba(20,20,20,.65);
 
     h2 {
-        font-size: 3em;
+        font-size: 1em;
         text-transform: uppercase;
         color: rgb(230,230,230)
     }

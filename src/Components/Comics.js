@@ -35,7 +35,7 @@ function Comics({comics, data}) {
         setSearchTerm(enteredText.target.value)
     }
 
-    console.log(dom)
+    // console.log(dom)
 
     return (
         <Fragment>
