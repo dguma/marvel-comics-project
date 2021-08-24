@@ -73,7 +73,7 @@ function Slider(props) {
         <StyledSection>
             <Content>
                 <h2>Marvel Comics</h2>
-                <p>Welcome to my 2nd project from a General Assembly assignmient. 
+                <p>Welcome to my 2nd project from a General Assembly assignment. 
                  Find information on Marvel's comics and characters</p>
             </Content>
             
